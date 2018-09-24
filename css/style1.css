@@ -1,0 +1,43 @@
+@media (min-width: 1000px) {
+    .one {
+        width: 1005px;
+    }
+}
+@media (min-width: 768px) and (max-width: 999px) {
+    .one {
+        width: 800px;
+    }
+}
+@media (min-width: 487px) and (max-width: 767px) {
+    .one {
+        width: 487px;
+    }
+}
+.fieldmain{
+	
+	width:100%;
+margin: auto;
+	text-align:center;
+}
+.mainfield {
+
+	
+	float:left;
+	 position: absolute;
+    
+    left: 50%;
+    margin-right: -50%;
+	
+	
+	}
+label
+ {
+	float:left; 
+	padding-right:10px;
+	}
+.regfield {
+	margin: auto;
+	clear:both; 
+	text-align:right; 
+	line-height:25px;
+	}

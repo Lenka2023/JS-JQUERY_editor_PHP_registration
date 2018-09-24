@@ -1,0 +1,98 @@
+function makeString(sourceStr){
+		var Stack= []; 
+		for(var s=0; s<Stack.length;s++){	
+			Stack.push(s);
+			
+										}
+		textarea=document.getElementById("text");
+		  expressionText = getSelectiontextarea( document.getElementById("text").value );
+		for (var i = 0; i < sourceStr.length; i++){														
+	/*		textarea=document.getElementById("text");
+		expressionText =( document.getElementById("text").value );
+		document.getElementById("text").innerHTML = expressionText.replace(/\n/g, '<br>');
+		
+		
+
+			if((Stack[s]!='Bold')&&((Stack[s]!='Code')/*&&(Stack[s]!='Str')*/)){
+				
+				switch(getSymbolTypes(i)){
+					 case 'Bold':
+					
+						 resultStr +='<span class="strong">'+ sourceStr[i];
+						  console.log( 'resultStr:' + resultStr );
+						  Stack.push( 'Bold');
+						  console.log( 'Stack:' + Stack[s] );
+					  
+					  break;
+					  case 'Code':
+						 resultStr+='</span><div class="commands"><pre>'+sourceStr[i];
+						 console.log( 'resultStr:' + resultStr );
+					  
+						 Stack.push('Code');
+					     console.log( 'Stack:' + Stack[s] );
+
+					 break;
+						
+					 default:
+					  resultStr +=sourceStr[i];
+					  console.log( 'resultStr:' + resultStr );
+					 
+					  Stack.push('Str');
+					  console.log( 'Stack:' + Stack[s] );
+				 
+											}
+																					}
+			
+
+
+		 console.log( 'Stack:' + Stack[s] );
+		var top=Stack[Stack.length-1];
+				console.log( 'top:' +top );
+		k=i+1;
+		n=getSymbolTypes(k);
+		 console.log( 'n:' + n );
+				if(k>sourceStr.length){
+					n='noSymbolTypes';
+										}
+				if((top=='Bold')&&((n!='Bold')||(k==boldIndexes.length))){
+					resultStr +='</span>';
+					 console.log( 'resultStr:' + resultStr );
+					 console.log( 'Stack:' + Stack[s] );
+					 var indexboldIndexes = Stack.indexOf('Bold');
+					if (indexboldIndexes > -1) {
+			Stack.splice(indexboldIndexes, 1);
+					}
+					//Stack.pop();
+					console.log( 'Stack:' + Stack[s] );
+						/*var indexboldIndexes = Stack.indexOf('Bold');
+					if (indexboldIndexes > -1) {
+			Stack.splice(indexboldIndexes, 1);*/
+			console.log( 'top:' +top );
+				} else 	if((top=='Bold')&&(n=='Bold')){
+		resultStr +=sourceStr[k];
+		console.log( 'resultStr:' + resultStr );
+
+														}	
+													}	
+			
+		
+			
+		if((top=='Code')&&((n!='Code')||(k==codeIndexes.length))){
+			resultStr+='</pre></div>';
+			console.log( 'resultStr:' + resultStr );
+					  Stack.pop();
+																	} 
+		if((top=='Code')&&(n=='Code')){
+		resultStr +=sourceStr[k];
+		console.log( 'resultStr:' + resultStr );
+
+										}	
+					/*var indexcodeIndexes = Stack.indexOf('Code');
+					if (indexcodeIndexes > -1) {
+			Stack.splice(indexcodeIndexes, 1);
+		}*/
+				
+				console.log( 'Stack:' + Stack[s] );													
+				return resultStr;
+				console.log( 'Stack:' + Stack[s] );
+														}
